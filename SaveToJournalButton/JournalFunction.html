@@ -1,0 +1,85 @@
+<HTML>
+	<HEAD>
+		<TITLE>This is a page</TITLE>
+		<SCRIPT type="text/javascript">
+			function getSelText() {
+				var txt=''; 
+				if (window.getSelection)
+					{txt=window.getSelection();}
+				else if(document.getSelection)
+					{txt=document.getSelection();} 
+				else if(document.selection)
+					{txt=document.selection.createRange().text;} 
+				else return '';
+				 return txt;
+			};
+ 
+ 			function startjournal() {
+				var q=getSelText(); 
+				if(q!='')
+					{ q='<blockquote>\n'+q+'\n</blockquote>\n';}
+					
+				var l=
+					'dayone://post?entry=['+
+					encodeURIComponent(document.title)+
+					']('+
+					encodeURIComponent(location.href+')\n'); 
+	
+				if(!document.referrer)
+					{r='';} 
+				else
+					{r='via '+encodeURIComponent(document.referrer);};
+	
+				window.location=l+r+'\n'+encodeURIComponent(q)+'\n';
+			};
+			
+			
+			/*These were just for testing*/			
+			function sample() {
+				
+				var q='This is the body of the text'
+				q='<blockquote>\n'+q+'</blockquote>\n';
+	
+				var l='dayone://post?entry=['+
+					encodeURIComponent(q)+
+					']('+
+					encodeURIComponent(location.href+')\n'); 
+	
+				window.location=l;
+			}
+			
+			function simple() {
+				var q='<blockquote>\nHello</blockquote>\n';
+	
+				var l='dayone://post?entry=['+
+					encodeURIComponent(q)+
+					']('+
+					encodeURIComponent(location.href+')\n'); 
+	
+				window.location=l;
+			};
+			
+		</SCRIPT>
+	</HEAD>
+	
+	<BODY>
+		<h1>This is a test</h1>
+		<INPUT type="button" value="plain url scheme" onClick="sample()" />
+		
+		<p>This is some random text that I could select and theoretically journal about.</p>
+
+		<INPUT type="button" value="Highlight some text to journal about it!" onClick="startjournal()" />
+
+		<h2>These work!:<h2>
+		<INPUT type="button" value="Just go to the calendar" onClick="window.location='dayone://calendar'" />
+		<INPUT type="button" value="Journal Entries" onClick="window.location='dayone://entries'" />
+		<INPUT type="button" value="Start an empty post" onClick="window.location='dayone://post'" />
+		
+		<h2>Instructions</h2>
+			1. Create a Bookmark in the bookmark bar
+			2. Right-click, hit edit
+			3. Replace the url with:
+		javascript:function getSelText() {var txt=''; if (window.getSelection){txt=window.getSelection();}else if(document.getSelection){txt=document.getSelection();} else if(document.selection){txt=document.selection.createRange().text;} else return ''; return txt;};  function startjournal() {var q=getSelText(); if(q!=''){ q='<blockquote>\n'+q+'\n</blockquote>\n';};var l='dayone://post?entry=['+encodeURIComponent(document.title)+']('+encodeURIComponent(location.href+')\n'); if(!document.referrer){r='';} else{r='via '+encodeURIComponent(document.referrer);};window.location=l+r+'\n'+encodeURIComponent(q)+'\n';};startjournal();
+
+	</BODY>
+</HTML>
