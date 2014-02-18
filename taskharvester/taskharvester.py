@@ -7,7 +7,8 @@ import os
 import ConfigParser
 from lxml import etree
 
-dayone_directory = "~/Dropbox/Apps/Day One/Journal.dayone/entries"
+output_file = "/Users/mhollinger/Dropbox/Documents/Taskpaper/foundtasks.taskpaper"
+dayone_directory = "/Users/mhollinger/Dropbox/Apps/Day One/Journal.dayone/entries"
 ini_file = 'taskextractor.ini'
 
 #Used to sort the directories in the last modified order
@@ -43,8 +44,8 @@ def read_element_value( root, xpath_selector ):
 def process_new_entries_since(last_run_time, new_task_function):
     for fl in newly_modified_files(last_run_time):
         #For debugging, showing the file
-        #mod_time = datetime.utcfromtimestamp(os.path.getmtime(os.path.join(os.path.expanduser(dayone_directory),fl)))
-        #print fl, datetime.strftime(mod_time, "%b %d %Y %H:%M")
+        mod_time = datetime.utcfromtimestamp(os.path.getmtime(os.path.join(os.path.expanduser(dayone_directory),fl)))
+        print fl, datetime.strftime(mod_time, "%b %d %Y %H:%M")
 
         entry_file = open(os.path.join(os.path.expanduser(dayone_directory),fl), 'rb')
         #(Why didn't DayOne be nice and do <key item=""UUID"> or even <UUID>xxx</UUID> Grrr!!!
@@ -62,9 +63,9 @@ def process_new_entries_since(last_run_time, new_task_function):
 def print_found_entries(fl, line):
     print "[{0}](dayone://edit?entryId={1})".format(line.trim(), fl.replace(".doentry",""))
 
-def append_found_entries(fl, line):
-    lne = line.strip()
-    task_file = open('found_tasks.taskpaper', 'a')
+def append_found_entries(fl, line):	
+    line = line.strip()
+    task_file = open(output_file, 'a')
     
     sep = line.split(" ")
     context = sep[0]
@@ -74,6 +75,9 @@ def append_found_entries(fl, line):
     
     task_file.write("- {0} [{1}](dayone://edit?entryId={2})\n".format(context, task, link))
     task_file.close()
+    
+    print "[{0}](dayone://edit?entryId={1})".format(line, fl.replace(".doentry",""))
+
 
 def get_last_run(harvester):
     config = ConfigParser.ConfigParser()
