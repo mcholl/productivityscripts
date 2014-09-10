@@ -1,0 +1,20 @@
+Taskpaper Calendar
+
+Purpose of this program:
+	With a single click, I'd like to be able to view all of my dated Taskpaper entries as a calendar.  
+
+Main Parser:
+	-	Be able to create a dictionary of dated items found in the passed file @done(14-08-26)
+	-	There could easily be two entries on a line with dates - [@]done() and [@]XXXXX... Be sure to give preference to anything other than [@]done.... @done(14-08-26)
+
+Calendar Display:
+	Threee-View:
+		-	Be able to display the "three-view"  (overdue, specified / today's items, future items ) in three blocks, but otherwise as a list @done(14-08-26)
+		-	Style the sheet 
+		- Have Three-View with overdue, today, future, error messages, undated
+		-	Actually parse the tasks into the correct categories
+
+	-	Be able to display any week's worth of task items, and navigate to the correct week either by selecting from a calendar, or by specifying on the url
+	-	Be able to display the current week's worth of task items
+	-	Be able to display a month's worth of task items
+	-	Be able to display the current month's worth of task items

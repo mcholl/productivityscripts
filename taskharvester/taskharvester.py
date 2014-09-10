@@ -3,13 +3,16 @@
 #Note: depends on lxml (pip install lxml) version = 3.3.1
 
 from datetime import date, datetime, tzinfo, timedelta, time
-import os
+import os, sys
 import ConfigParser
 from lxml import etree
 
-output_file = "/Users/mhollinger/Dropbox/Documents/Taskpaper/foundtasks.taskpaper"
-dayone_directory = "/Users/mhollinger/Dropbox/Apps/Day One/Journal.dayone/entries"
+output_file = "~/Dropbox/Documents/TaskPaper/foundtasks.taskpaper"
+dayone_directory = "~/Dropbox/Apps/Day One/Journal.dayone/entries"
 ini_file = 'taskextractor.ini'
+
+
+output_file = os.path.expanduser(output_file)
 
 #Used to sort the directories in the last modified order
 #http://stackoverflow.com/questions/4500564/directory-listing-based-on-time
@@ -43,40 +46,53 @@ def read_element_value( root, xpath_selector ):
 
 def process_new_entries_since(last_run_time, new_task_function):
     for fl in newly_modified_files(last_run_time):
-        #For debugging, showing the file
-        mod_time = datetime.utcfromtimestamp(os.path.getmtime(os.path.join(os.path.expanduser(dayone_directory),fl)))
-        print fl, datetime.strftime(mod_time, "%b %d %Y %H:%M")
+        try:
+            #For debugging, showing the file
+            mod_time = datetime.utcfromtimestamp(os.path.getmtime(os.path.join(os.path.expanduser(dayone_directory),fl)))
+            print fl, datetime.strftime(mod_time, "%b %d %Y %H:%M")
+            
+            entry_file = open(os.path.join(os.path.expanduser(dayone_directory),fl), 'rb')
+            #(Why didn't DayOne be nice and do <key item=""UUID"> or even <UUID>xxx</UUID> Grrr!!!
 
-        entry_file = open(os.path.join(os.path.expanduser(dayone_directory),fl), 'rb')
-        #(Why didn't DayOne be nice and do <key item=""UUID"> or even <UUID>xxx</UUID> Grrr!!!
-    
-        tree = etree.parse( entry_file )    
-        #uuid = read_element_value( tree, "//key[text()='UUID']/../string")
-        body = read_element_value( tree, "//key[text()='Entry Text']/../string")
-    
-        #Now, extract only lines that begin with @ and isn't already @done
-        for line in body.split("\n"):
-            if line.lstrip().startswith("@"):
-                if "@done" not in line.lower():
-                    new_task_function(fl, line)
+        
+            tree = etree.parse( entry_file )
+            #uuid = read_element_value( tree, "//key[text()='UUID']/../string")
+            body = read_element_value( tree, "//key[text()='Entry Text']/../string")
+        
+            #Now, extract only lines that begin with @ and isn't already @done
+            for line in body.split("\n"):
+                if line.lstrip().startswith("@"):
+                    if "@done" not in line.lower():
+                        new_task_function(fl, line)
+        except:
+            print "Error parsing lines"
+            print entry_file
+            print "Unexpected error:", sys.exc_info()
                     
 def print_found_entries(fl, line):
     print "[{0}](dayone://edit?entryId={1})".format(line.trim(), fl.replace(".doentry",""))
 
 def append_found_entries(fl, line):	
-    line = line.strip()
-    task_file = open(output_file, 'a')
-    
-    sep = line.split(" ")
-    context = sep[0]
-    task = line[len(context)+1:]
+    try:
+        # if line is None:
+        #     return
+
+        line = line.strip()
+        task_file = open(output_file, 'a')
         
-    link = fl.replace(".doentry","")
-    
-    task_file.write("- {0} [{1}](dayone://edit?entryId={2})\n".format(context, task, link))
-    task_file.close()
-    
-    print "[{0}](dayone://edit?entryId={1})".format(line, fl.replace(".doentry",""))
+        sep = line.split(" ")
+        context = sep[0]
+        task = line[len(context)+1:]
+            
+        link = fl.replace(".doentry","")
+        
+        task_file.write("- {0} [{1}]()\n\t[{1}]: dayone://edit?entryId={2}\n\n".format(context, task, link))
+        task_file.close()
+        
+        #print "[{0}](dayone://edit?entryId={1})".format(line, fl.replace(".doentry",""))
+    except:
+        print "Error appending from {1} to file {0}".format(output_file, fl)
+        print "Unexpected error:", sys.exc_info()
 
 
 def get_last_run(harvester):
@@ -98,7 +114,7 @@ def get_last_run(harvester):
         
 def set_last_run(harvester):
     config = ConfigParser.ConfigParser()
-    config.read('taskextractor.ini')
+    config.read(ini_file)
     
     cfg = open(ini_file,'w')
     last_run = config.set('last_run', harvester, datetime.now().strftime("%b %d %Y %H:%M"))

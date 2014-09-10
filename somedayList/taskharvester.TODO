@@ -1,0 +1,32 @@
+DayOne Task Harvester
+===
+
+Purpose of this program:
+Task Harvester is a set of tools that lets me use DayOne as my journal, and record to do items as they come to me.  Found tasks are gathered into the main textual todo list when the program runs, and tasks are placed where they "should" be.  This means
+	- Any line in a journal entry that starts with an [@TAG] becomes a task in FoundTasks.taskpaper, with a reference to the journal entry, except those that are marked [@-done]
+	- Any entry that contains a #Someday tag goes to the "Someday List" - a reference to the journal entry appears at the bottom
+
+Feature Enhancements:
+	-	Be able to call the object as a Flask implementation (this way, I can do the calendar stuff)
+
+	Someday List:
+		- Separate out the last run date from taskharvester
+		-	Why isn't the list rendering as a list? (I have the silly links working after all!)
+		-	Look at other [markdown extensions](http://lepture.com/en/2014/markdown-parsers-in-python) - can they do they footnote notation? 
+
+	TaskHarvester:
+		-	Be able to trigger it from Sublime
+
+	Evernote Archiver:
+		-	Be able to automatically move DayOne entries to Evernote, while perserving formatting
+		-	Repplicate this class so that it can do the same kind of searching within Evernote?
+
+Scheduling:
+	At one point, this was running as a cron job on one of my servers, but it seems to have stopped working automatically.  I really should figure out why.
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+	-	Be able to run the object, or use it as an object (if module = "__main__") @done(14-08-26) @project(Feature Enhancements)
+	- display the results in a webpage @done(14-08-22) @project(Feature Enhancements / Someday List)
+	- Reuse the same class framework @done(14-08-22) @project(Feature Enhancements / TaskHarvester)
+	- Move the references to the bottom of the someday list @done(14-08-22) @project(Feature Enhancements / Someday List)

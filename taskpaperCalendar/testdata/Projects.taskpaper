@@ -1,0 +1,233 @@
+
+Overdue:
+	-	Finish the Everplan Advanced Directive
+	-	Fix "broken login items" on my Mac (causes the slow login)
+	-	Fix SEConcordance
+	-	Extend the Wireless network
+	-	Write the Calendar TaskHarvester program	- extend the network with the airport express 
+	- set up the roku on dad's tv / find the power cord for it, set up plex @home
+
+	- fix wifi Pwds on scale and lights @home
+
+	- Set up Fluid Apps
+	- Check out Meal Planner app that I just bought.  Note: It has a barcode scanner!
+
+Divorce:
+	Prayer:
+
+	Towards a settlement:
+		- 	@Computer [@project(divorce) Pretty up the lists of property](dayone://edit?entryId=6624D926806C4600A8E5F610E77A47C7) @do(2014-08-29)
+		-	Don't forget the "Paster" plate that was my thank you gift from Long Branch
+
+	Strengthen the Court Case:		
+
+	Living:
+		- set up an iPhone for the kids that will recieve and send FaceTime calls and skype calls over wifi
+		
+House:
+
+	Basement:
+
+	Organize Dad:
+		-	Dad needs an EverPlan so I know what to do! @do(2014-10-01)
+		-	change dad's sheets @do(2014-10-01)
+		-	Where is Dad's Viagra? @do(2014-09-15)
+
+	Clean up J's room:
+		- 	Clear out the closet
+		-	Get the boxes out of the house @do(Saturday)
+		-	Hang the Minecraft poster
+		-	Make a nightstand that looks like a minecraft furnace
+			
+	Laundry Room:
+		- Fix the ironing board
+		- bring several hangers in there
+		
+	Garden:
+		- Put netting around the strawberries
+
+		- Find a place for blueberries
+		- Find a place for asparagus
+		- Find a place for raspberries
+
+	Organize the Hottub room:
+		- See if I can open the windows
+		- Working clock
+
+		- @Home [Be able to write in the hot tub](dayone://edit?entryId=9274B340A6CC4989896DF75D15874942)
+
+	Organize the deck:
+		- Have a grilling area
+		- Have a swing area in the grass that points away from the sun
+		- Have an outside balls & toys area
+		- Have a gardening supplies area
+
+	Organize the Basement:
+		- Get rid of the massage chair! @do(Tuesday)
+		- Toolbox to the furnace room!
+
+
+	Kids:
+		- Get serious about chores for the kids once they are here week on/week off @do(2014-08-28)
+
+	Kitchen:
+		- @Work , Print out the three Baking Graphics and post them in the cabinets
+
+Work:
+
+	Atlassian Architecture:
+		-	Rich: What are my next steps on this? @Email
+
+	Tealium Tester:
+		-	Collect a beacon call
+		-	Check out PhantomJS - is that enough to be able to collect the beacon?
+		-	@Phone , Contact BrowserStack - How do I do a BrowserMobProxy?
+		-	PhantomJS does element scraping, not beacon collection
+
+		
+	Skills to Acquire:
+		-	Read Seven Databases in Seven Weeks
+
+		- Learn Angular JS
+		- Watch http://zachholman.com/talk/git-github-secrets/
+		- [Learn Node.js][12]
+			[12]: http://blog.codeship.io/2014/05/07/nodejs-beginners-guide.html
+
+		- @Computer [At some point, I should learn to write services for the Mac.][6]
+		- At some point, learn about Presto mutisite: Get credentials from Laura
+
+		- @Internet [Check out the MEAN framework]()
+			[Check out the MEAN framework]: dayone://edit?entryId=B12C13C1950E45449DE5F825D152916A
+
+		- @Internet [Check out WebStorms]()
+			[Check out WebStorms]: dayone://edit?entryId=B12C13C1950E45449DE5F825D152916A
+
+	BDD Expertise:
+		- Investigate TestNG
+		- Learn how to do example tables.
+		- Have the SeleniumSteps working well enough to where people can do the basics
+		- Write up in Confluence how anyone can use SOASteps or Selenium Steps
+		
+	For QA:
+		- Work with Harriet to select a good reporting plugin
+		- Work with Holly to select a good test management plugin to Confluence and Jira
+
+	Misc:
+
+Tech:
+	Productivity Tech:
+		- Write up requirements / test for a Someday List program
+		- Start using Editorial and Alfred for actual workflows...
+
+		-	Why doesn't Plain Tasks show the bullets? (Try reinstalling the plist?)
+
+		- @Home [Fix up a phone for Rachel]()
+		[Fix up a phone for Rachel]: dayone://edit?entryId=01346C94D84444C1B52678E15BC823A7
+
+		- @Computer [Make Dropzone Scripts for Plex, Calibre, Picasa]()
+		[Make Dropzone Scripts for Plex, Calibre, Picasa]: dayone://edit?entryId=CCEAD04C336F4164B7443F2CB80DD63D
+
+		- @Internet [ Update my linked in profile]()
+		[ Update my linked in profile]: dayone://edit?entryId=ABCBC59548204260B512F4BBC53106B1
+
+		- @Computer [Write Productivity Scripts that are called from Sublime]()
+		[Write Productivity Scripts that are called from Sublime]: dayone://edit?entryId=1744204ADB4F4F24A49D4867C1CBAB39
+
+		- @Computer [Set up a Brew Cask to install all the programs on my mac I care about that *aren't* in the AppStore.](dayone://edit?entryId=5D7D879FF1E54B92ADDBEA93E2379269)
+
+		- @Someday [Tag and Organize my pictures]()
+			[Tag and Organize my pictures]: dayone://edit?entryId=4C028981A4234D13961B471F8F1674F7
+
+		- @Q [@Someday Consider writing a script that would retrieve a random entry and send it to my email, once per day.]()
+			[@Someday Consider writing a script that would retrieve a random entry and send it to my email, once per day.]: dayone://edit?entryId=65A001286B8A42CD93314BB63207FCC8
+
+		- @Someday [Daily Almanac]()
+			[Daily Almanac]: dayone://edit?entryId=7EA85B28A320496BA174066B241C5A76
+
+	Consumer Tech:
+		- Extend the wireless network into the sunroom by using the apple aiport express. 
+		- it would be good to put wemo switches in the furnace room, and document the installation process. Then write up the pros: best alarm clock ever! And cons: resets. 
+
+	Taskpaper Calendar:
+		- Be able to display events on a calendar (like my meals)
+		- It would be nice if Editorial could be my Taskpaper Calendar solution
+
+	Configure Editorial:
+		- add actions like drafts: to DayOne, Evernote, Facebook, Gmail	
+	
+	SEConcordance:
+		- Get the updater running regularly again
+		- Talk to Jon Ericson: Is it still okay if I contact Logos?
+		- Make a meta post on C.SE and BH.SE.  Maybe add one on MY.SE too.
+		- Talk to Logos about incorporating it into the Passage Guide
+
+	AffableGeek.com:
+		- Be able to point my DNS to the WordPress site, or else move it back to AWS
+		- Set up a link to all of my Libraries (Plex, Calibre, Picasa, iTunes)
+		- get my website DNS - need to wait 60 days to transfer it to godaddy.com @do(2014-09-01) , or pay $35 
+
+	Plex:
+		- @Home , look through the DVD collection and see what things I want to / need to rip (Use DVD Rip)
+	
+	Video Games:
+		- @Computer [Figure out how to add Jonathan's credentials to the XBox.](dayone://edit?entryId=A6AE208EBB9F44C9AB34B8F843AB6761)
+		- Connect J's GamerTag to his email for Usage Limits Tracking
+
+	Stack Exchange:
+		- BH.Se: what is the source of the thousands=clan (aleph) theory?
+		- @Q [Is there more to the counter argument to putting suicide nets on the Golden Gate Bridge besides funding and aesthetics?]()
+			[Is there more to the counter argument to putting suicide nets on the Golden Gate Bridge besides funding and aesthetics?]: dayone://edit?entryId=1AF1527049D847F8B3C392CFD4402993
+
+		- Post to Politics.SE:, Why, despite increased connectedness is there increased polarization?
+		- how to calculate when a bubble will burst?
+		- @Q [Are Rarity's parents unicorns?]()
+			[Are Rarity's parents unicorns?]: dayone://edit?entryId=1AF1527049D847F8B3C392CFD4402993
+
+		- @computer [Write up the Basics Meta Question on C.SE]()
+			[Write up the Basics Meta Question on C.SE]: dayone://edit?entryId=36DE76C1327449EDBCA6A1F64BA6A2A8
+
+
+	Mac:
+		- Backup my mac to a portable harddrive, per the Lifehacker article
+
+		- @Computer [Set up a Brew Cask to install all the programs on my mac I care about that *aren't* in the AppStore.]()
+			[Set up a Brew Cask to install all the programs on my mac I care about that *aren't* in the AppStore.]: dayone://edit?entryId=5D7D879FF1E54B92ADDBEA93E2379269
+
+		- @Computer [At some point, I should learn to write services for the Mac.]()
+			[At some point, I should learn to write services for the Mac.]: dayone://edit?entryId=16E026207D8A43C0908E8E5B2088A194
+
+
+		- @Mac [Install and use these apps!]()
+			[Install and use these apps!]: dayone://edit?entryId=C3F67592CAA342809867EA5F96767DEC
+
+Church:
+
+		- @Computer , Make a style guide for the slides.
+
+		DivorceCare:
+		-	Go ahead and purchase the materials, and go through the course myself.
+		-	Brainstorm how this can move from lecture to connection.	
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+	- See if I can tint the windows or block them with blinds or a shelf @do(2014-08-30) @done(2014-09-02) @project(House / Organize the Hottub room)
+	- Place for towels and swimsuits @do(2014-08-30) @done(2014-09-02) @project(House / Organize the Hottub room)
+	- Place for chemicals and test strips @do(2014-08-30) @done(2014-09-02) @project(House / Organize the Hottub room)
+	- Consider Fasting @due(2014-08-29) @done(2014-09-02) @project(Divorce)
+	- Clean up @do(2014-08-30) @done(2014-09-02) @project(House / Organize the Hottub room)
+	- AgileCraft:  @done(2014-09-02) @project(Work)
+	-	Update the one pager @done(2014-09-02) @project(Work / Atlassian Architecture)
+	-	Sign up for a running of the course @done(2014-09-02) @project(Church / DivorceCare)
+	-	Follow up with Floris UMC @do(Friday) @done(2014-09-02) @project(Church / DivorceCare)
+	-	Fix up the architecture diagram @done(2014-09-02) @project(Work / Atlassian Architecture)
+	- Jonathan would like to try paintball or laser tag @done(2014-08-07) @project(House / Kids)
+	- Discovery: @done(2014-08-07) @project(Divorce)
+	- Another desk for Wolfie? @done(2014-08-07) @project(House / Organize the Basement)
+	- @PHONE [Try out Editorial](dayone://edit?entryId=0F6545DF7B2143DA9BB7A3C95F3380F2) @done(2014-08-07) @project(Tech / Mac)
+	- @Computer [Figure out how to copy Wii Games and/or copy them to a Hard Drive](dayone://edit?entryId=A6AE208EBB9F44C9AB34B8F843AB6761) @done(2014-08-07) @project(Tech / Video Games)
+	-	Sheet Fasteners @done(2014-08-07) @project(House / Basement)
+	-	Highlight key phrases from the emails @cancelled(2014-08-07) @project(Divorce / Strengthen the Court Case)
+	-	Change the Sheets @done(2014-08-07) @project(House / Basement)
+	-	@Email , I still need to get all of the Ameriprise statements @done(2014-08-07) @project(Divorce / Discovery)
+	-	@Phone , Call Joe Youngquist: Let's integrate the beacon collector @done(2014-08-04) @project(Work / Tealium Tester)
+	-	Do the demo @done @project(Work / AgileCraft)

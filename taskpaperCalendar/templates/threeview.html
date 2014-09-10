@@ -1,0 +1,21 @@
+<!doctype html>
+<title>Three View</title>
+
+<TABLE>
+	<TR>
+		<TD>Overdue</TD>
+		<TD>Today ({{context.center_date}})</TD>
+		<TD>Future</TD>
+	</TR>
+	<TR>
+		<TD>{{context.overdue}}</TD>
+		<TD>
+			<ul>
+				{% for task in context.current %}
+				<li>{{task}}</li>
+				{% endfor %}
+			</ul>
+		</TD>
+		<TD>{{context.future}}</TD>
+	</TR>
+</TABLE>
